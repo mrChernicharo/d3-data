@@ -1,0 +1,22 @@
+:root {
+	--color-1: indigo;
+	--color-2: purple;
+	--color-3: violet;
+	--color-4: pink;
+	--grey: #cdcdcd;
+	--grey2: #585858;
+}
+
+body {
+	margin: 0;
+}
+
+#canvas {
+	/* min-width: 360px;
+	max-width: 1200px;
+	width: 80%; */
+	height: clamp(200px, 50vmin, 600px);
+	width: clamp(360px, 80%, 1200px);
+	border: 1px solid var(--grey);
+	margin: 0 auto;
+}
