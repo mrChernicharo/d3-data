@@ -40,6 +40,7 @@ function updateChart() {
 	const { data, elements, dims } = chart;
 	const { width, height } = dims;
 	const { svg, xAxis, yAxis, bars } = elements;
+	const maxY = d3.max(data.map(item => item.totalMedals));
 	const margins = {
 		top: Math.max(32, height * 0.2),
 		bottom: Math.max(16, height * 0.1),
@@ -47,11 +48,7 @@ function updateChart() {
 		right: Math.max(16, width * 0.05),
 	};
 
-	// if (!data) return;
-
 	svg.attr('width', width).attr('height', height);
-
-	const maxY = d3.max(data.map(item => item.totalMedals));
 
 	// console.log(margins);
 	// console.log(maxY);
